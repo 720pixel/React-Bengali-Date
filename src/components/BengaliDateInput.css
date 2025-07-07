@@ -1,0 +1,114 @@
+.bengali-date-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.bengali-date-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', Arial, sans-serif;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.bengali-date-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.bengali-date-input:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.bengali-date-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Support for different themes */
+.bengali-date-input-container.dark .bengali-date-input {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.bengali-date-input-container.dark .bengali-date-input:focus {
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.25);
+}
+
+.bengali-date-input-container.dark .bengali-date-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Error state */
+.bengali-date-input-container.error .bengali-date-input {
+  border-color: #e53e3e;
+}
+
+.bengali-date-input-container.error .bengali-date-input:focus {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.25);
+}
+
+/* Success state */
+.bengali-date-input-container.success .bengali-date-input {
+  border-color: #38a169;
+}
+
+.bengali-date-input-container.success .bengali-date-input:focus {
+  border-color: #38a169;
+  box-shadow: 0 0 0 2px rgba(56, 161, 105, 0.25);
+}
+
+/* Size variants */
+.bengali-date-input-container.small .bengali-date-input {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.bengali-date-input-container.large .bengali-date-input {
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+/* Validation icon styling */
+.bengali-date-input-container {
+  position: relative;
+}
+
+.validation-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.validation-icon.valid {
+  color: #38a169;
+}
+
+.validation-icon.invalid {
+  color: #e53e3e;
+}
+
+/* RTL support for Bengali text */
+.bengali-date-input[dir="rtl"] {
+  text-align: right;
+}
+
+/* Adjust padding when validation icon is shown */
+.bengali-date-input-container:has(.validation-icon) .bengali-date-input {
+  padding-right: 30px;
+}
